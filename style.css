@@ -1,0 +1,78 @@
+/* ==================== GLOBAL ==================== */
+/* ================================================ */
+* {
+  box-sizing: border-box;
+  border: 1px solid black;
+  font-family: 'Montserrat', sans-serif;;
+}
+
+.wholeContainer{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+/* =================== HEADER ===================== */
+/* ================================================ */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+nav {
+  width: 80%;
+}
+
+ul {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style-type: none;
+  justify-content: space-evenly;
+  padding: 0;
+  width
+}
+
+li > a {
+  font-size: 1em;
+}
+/* =================== BODY ======================= */
+/* ================================================ */
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  width: 80%;
+}
+
+/* =================== CARDS ===================== */
+.eachCard {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.cardPart {
+  width: 100%;
+  margin: 0;
+}
+
+.cardWords {
+  
+}
+
+/* =================== FOOTER ===================== */
+/* ================================================ */
+footer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
