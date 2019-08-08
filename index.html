@@ -1,33 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <title>Andrew Hollingworth</title>
-</head>
-<body>
-  <div class="wholeContainer">
-    <header>
-      <h1>Andrew Hollingworth</h1>
-      <nav>
-        <ul>
-          <li><a href="">about</a></li>
-          <li><a href="">code</a></li>
-          <li><a href="">resume</a></li>
-          <li><a href="">contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      
-    </main>
-    <footer>
-      <p>© Andrew Hollingworth 2019</p>
-    </footer>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Added Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Josefin+Sans:400,700&display=swap" rel="stylesheet">
+    <!-- Ionicons Icons -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Andrew Hollingworth</title>
+  </head>
+  <body>
+  <!-- PROGRESS BAR -->
+  <!-- <div class="sticky-top progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div> -->
+  <!--- THIS IS THE NAVBAR -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand text-secondary" href="#">Andrew Hollingworth</a>
+    <button class="navbar-toggler bg-secondary" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ml-auto">
+          <a class="nav-link text-secondary" href="#">Top of the Page</a>
+        </li>
+        <li class="nav-item ml-auto">
+          <a class="nav-link text-secondary" href="#">My Projects</a>
+        </li>
+        <li class="nav-item ml-auto">
+          <a class="nav-link text-secondary" href="#">Get in Touch</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- LANDING BACKGROUND IMAGE -->
+  <img src="https://i.pinimg.com/originals/2f/f2/ec/2ff2ecf64b296eaa362f00ced13bef57.png" class="img-fluid" alt="Responsive image">
+
+<!-- THIS IS WHERE PROJECTS AND CARDS WILL GO -->
+<div class=" container-fluid bg-primary pb-5">
+  <div class="bg-light container justify-content-center floating-section pb-4">
+    <h2  class='sectionheader text-dark'>My Work</h2>
+    <div class="row justify-content-center">
+      <div class="card col-8 col-md-5 col-lg-4 my-4 mx-3">
+        <img src="https://i.pinimg.com/originals/48/cb/53/48cb5349f515f6e59edc2a4de294f439.png" class="card-img-top" alt="filler">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card col-8 col-md-5 col-lg-4 my-4 mx-3">
+        <img src="https://onaliternote.files.wordpress.com/2016/11/wp-1480230666843.jpg" class="card-img-top" alt="filler">
+        <div class="card-body">
+          <p class="card-text">A second example that contains content.</p>
+        </div>
+      </div>
+      <div class="card col-8 col-md-5 col-lg-4 my-3 mx-3">
+        <img src="https://previews.123rf.com/images/fordzolo/fordzolo1506/fordzolo150600296/41026708-example-white-stamp-text-on-red-backgroud.jpg" class="card-img-top" alt="filler">
+        <div class="card-body">
+          <p class="card-text">THIRD EXAMPLE.</p>
+        </div>
+      </div>
   </div>
-  <script src="main.js"></script>
-</body>
+  </div>
+</div>
+<!-- GET IN TOUCH FORM -->
+<div class="container-fluid triangle-top bg-primary">
+</div>
+<div class="container-fluid bg-secondary">
+  <div class="container pt-n5 justify-content-center bg-light">
+    <h2 class='sectionheader text-dark'>Get in Touch</h2>
+    <form>
+      <div class="row">
+          <div class="col-12 col-md-6 my-2">
+            <input type="text" class="form-control" placeholder="Name">
+          </div>
+          <div class="col-12 col-md-6 my-2">
+            <input type="text" class="form-control" placeholder="Email">
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-12 my-2">
+          <input type="text" class="form-control" placeholder="Subject">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-12 my-2">
+          <textarea class="form-control" id="messageText" placeholder="Message" rows="3"></textarea>
+        </div>
+    </div>
+      <div class="row">
+          <div class="col-12 my-2">
+          <button type="submit" class="btn btn-primary "><span class="align-center">SEND  <ion-icon class='align-center' name="send"></ion-icon></span></button>
+          </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- DIVIDER -->
+<div class="container-fluid bg-secondary p-0">
+  <div class="triangle-foot bg-secondary p-0"></div>
+</div>
+<!-- Footer -->
+  <footer class="mastfoot container-fluid bg-primary text-primary">
+    <div class='row d-flex justify-content-center pt-3'>
+      <h2><ion-icon name="logo-github"></ion-icon> <ion-icon name="logo-linkedin"></ion-icon>  <ion-icon name="logo-codepen"></ion-icon></h2>
+    </div>
+    <div class='row flex-fill d-flex justify-content-center pb-2'>
+      <p>© Andrew Hollingworth 2019</p>
+    </div>
+  </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
 </html>

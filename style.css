@@ -1,78 +1,113 @@
-/* ==================== GLOBAL ==================== */
-/* ================================================ */
-* {
-  box-sizing: border-box;
-  border: 1px solid black;
-  font-family: 'Montserrat', sans-serif;;
+/* Global */
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+/* ==========PROGRESS BAR============ */
+.progress-container {
+  width: 100%;
+  height: 0.2em;
+  background: #ccc;
+}
+.progress-bar {
+  height: 0.2em;
+  background: #F28322;
+  width: 100%;
 }
 
-.wholeContainer{
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-
-/* =================== HEADER ===================== */
-/* ================================================ */
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h1 {
-  font-family: 'Josefin Sans', sans-serif;
+/* ==========NAVIGATION============ */
+.navbar-brand {
   font-size: 2em;
-  font-weight: 600;
-  margin: 0 auto;
+  font-weight: 400;
+  line-height: 1em;
 }
 
-nav {
+.navbar-toggler {
+  border: 0;
+}
+
+.nav-link {
+  font-size: 1.2em;
+}
+
+/* ========== SECTIONS ============ */
+.floating-section {
+  border-radius: .7em;
+  position: relative;
+  margin-top: -4rem;
+  z-index: 1;
   width: 80%;
 }
 
-ul {
-  display: flex;
-  flex-flow: row nowrap;
-  list-style-type: none;
-  justify-content: space-evenly;
-  padding: 0;
-  width
-}
-
-li > a {
-  font-size: 1em;
-}
-/* =================== BODY ======================= */
-/* ================================================ */
-main {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  width: 80%;
-}
-
-/* =================== CARDS ===================== */
-.eachCard {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
-  margin: 1em 0;
-}
-
-.cardPart {
-  width: 100%;
-  margin: 0;
-}
-
-.cardWords {
-  
-}
-
-/* =================== FOOTER ===================== */
-/* ================================================ */
-footer {
-  display: flex;
+.sectionheader {
   text-align: center;
-  justify-content: center;
+  padding-top: .7em;
+  font-weight: 600;
+}
+
+/* FORM SECTION */
+.form-section {
+  border-radius: .7em;
+  position: relative;
+  z-index: 1;
+  width: 80%;
+}
+
+/* ==========CARDS============ */
+.card {
+  font-family: "Crimson Text", serif;
+}
+
+.triangle-top {
+  height: 0px;
+  width: 100%;
+  border-left: 100vw solid #F2B705;
+  border-right: 0em solid transparent;
+  border-bottom: 0em solid transparent;
+  border-top: 10em solid transparent;
+  marging-bottom: 5em;
+}
+
+
+.triangle-foot {
+  height: 0;
+  width: 100%;
+  border-left: 100vw solid #03658C;
+  border-right: 0em solid transparent;
+  border-bottom: 0em solid transparent;
+  border-top: 10em solid transparent;
+}
+
+/* ========== FORM ============ */
+form {
+  text-align: center;
+
+}
+
+footer {
+  font-size: 1.3em;
+}
+
+/* COLORS */
+.bg-light {
+
+}
+
+.bg-primary {
+  background-color: #03658C!important;
+}
+
+.bg-secondary {
+  background-color: #F2B705!important;
+}
+
+.text-primary {
+  color: #F29F05!important;
+}
+
+.text-secondary {
+  color: #F2CB05!important;
+}
+
+.text-dark {
+  color: #03658C!important;
 }
