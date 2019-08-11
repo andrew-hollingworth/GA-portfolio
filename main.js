@@ -8,7 +8,7 @@ function progressBar() {
   document.getElementById('myBar').style.width = scrolled + '%';
 }
 
-// API CALL
+// ============API CALL=============//
 // const originalURL = 'https://docs.google.com/spreadsheets/d/1dQxUB4awT-p7naX00MSJSYbyXKmI-7mfIsoh5BJsizk/edit#gid=0';
 
 // ID for sheet:
@@ -16,40 +16,44 @@ const id = '1dQxUB4awT-p7naX00MSJSYbyXKmI-7mfIsoh5BJsizk';
 
 const source = `https://spreadsheets.google.com/feeds/list/${id}/od6/public/values?alt=json`;
 
-console.log(source);
 
-// // TESTING OBJECT
-// const cardData = [{
-//   image: 'https://i.ebayimg.com/images/g/dEMAAOSwqRlcO3u6/s-l300.jpg',
-//   heading: 'D&D',
-//   text: 'This is my project that is all about D&D. Being a nerd is the best thing ever.',
-// }, {
-//   image: 'https://i.ebayimg.com/images/g/dEMAAOSwqRlcO3u6/s-l300.jpg',
-//   heading: 'D&D',
-//   text: 'This is my project that is all about D&D. Being a nerd is the best thing ever.',
-// }];
-
-// VARIABLES
-// const containerDiv = document.querySelector('main');
-
+class Cardclass {
+  constructor(title, image, text) {
+    this.title = title;
+    this.image = image;
+    this.text = text;
+  }
+}
 
 // ============CONSTRUCT A CARD=============//
-// const buildCard = (cardData) => {
-//   const newCard = document.createElement('div');
-//   const textDiv = document.createElement('div');
-//   const cardImage = document.createElement('img');
-//   const cardHeading = document.createElement('h2');
-//   const cardText = document.createElement('p');
-//   newCard.classList.add('eachCard');
-//   textDiv.classList.add('cardWords');
-//   cardImage.src = cardData.image;
-//   cardImage.classList.add('cardPart');
-//   cardHeading.innerText = cardData.heading;
-//   cardHeading.classList.add('cardPart');
-//   cardText.innerText = cardData.text;
-//   cardText.classList.add('cardPart');
-//   newCard.appendChild(cardImage);
-//   containerDiv.appendChild(newCard);
-// };
-//
-// cardData.forEach(buildCard);
+const buildCard = (cardData) => {
+  const newCard = document.createElement('div');
+  const bodyDiv = document.createElement('div');
+  const cardImage = document.createElement('img');
+  const cardText = document.createElement('p');
+  newCard.classList.add('card', 'col-8', 'col-md-5', 'col-lg-4', 'my-4', 'mx-3', 'bg-light', 'card-body');
+  cardImage.src = cardData.image;
+  cardImage.classList.add('card-img-top');
+  cardText.innerText = cardData.text;
+  cardText.classList.add('card-text');
+  newCard.appendChild(cardImage);
+  newCard.appendChild(bodyDiv);
+  bodyDiv.appendChild(cardText);
+  document.querySelector('#card-holder').appendChild(newCard);
+};
+
+async function makeAPICall() {
+  const cardData = [];
+  const res = await axios(source);
+  const entry = res.data.feed.entry;
+  for (let i = 0; i < entry.length; i += 1) {
+    cardData.push(
+      new Cardclass(entry[i].gsx$title.$t, entry[i].gsx$image.$t, entry[i].gsx$description.$t),
+    );
+  }
+  console.log(cardData);
+  cardData.forEach(buildCard);
+}
+
+// .data.feed.entry[0].gsx$title
+makeAPICall();

@@ -8,12 +8,16 @@
     <!-- Added Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Josefin+Sans:400,700&display=swap" rel="stylesheet">
     <!-- Ionicons Icons -->
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- AXIOS for API Call -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <title>Andrew Hollingworth</title>
   </head>
@@ -52,14 +56,15 @@
 <div class="container-fluid bg-primary pb-5">
   <div class="bg-white container justify-content-center floating-section pb-4">
     <h2  class='sectionheader text-dark'>My Work</h2>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" id='card-holder'>
       <div class="card col-8 col-md-5 col-lg-4 my-4 mx-3 bg-light">
+        <h3 class='text-center'>Card Title</h3>
         <img src="https://i.pinimg.com/originals/48/cb/53/48cb5349f515f6e59edc2a4de294f439.png" class="card-img-top" alt="filler">
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
       </div>
-      <div class="card col-8 col-md-5 col-lg-4 my-4 mx-3 bg-light">
+      <!-- <div class="card col-8 col-md-5 col-lg-4 my-4 mx-3 bg-light">
         <img src="https://onaliternote.files.wordpress.com/2016/11/wp-1480230666843.jpg" class="card-img-top" alt="filler">
         <div class="card-body">
           <p class="card-text">A second example that contains content.</p>
@@ -70,7 +75,7 @@
         <div class="card-body">
           <p class="card-text">THIRD EXAMPLE.</p>
         </div>
-      </div>
+      </div> -->
   </div>
   </div>
 </div>
