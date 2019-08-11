@@ -23,7 +23,7 @@
     <div class="progress-bar" id="myBar"></div>
   </div> -->
   <!--- THIS IS THE NAVBAR -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-primary">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-secondary">
     <a class="navbar-brand text-secondary" href="#">Andrew Hollingworth</a>
     <button class="navbar-toggler bg-secondary" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,38 +31,41 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item ml-auto">
-          <a class="nav-link text-secondary" href="#">Top of the Page</a>
+          <a class="nav-link text-secondary" href="#top">Back to the Top</a>
         </li>
         <li class="nav-item ml-auto">
-          <a class="nav-link text-secondary" href="#">My Projects</a>
+          <a class="nav-link text-secondary" href="#work">Things I've Made</a>
         </li>
         <li class="nav-item ml-auto">
-          <a class="nav-link text-secondary" href="#">Get in Touch</a>
+          <a class="nav-link text-secondary" href="#GIT">Get in Touch</a>
         </li>
       </ul>
     </div>
   </nav>
   <!-- LANDING BACKGROUND IMAGE -->
-  <img src="https://i.pinimg.com/originals/2f/f2/ec/2ff2ecf64b296eaa362f00ced13bef57.png" class="img-fluid" alt="Responsive image">
+  <img src="https://i.pinimg.com/originals/2f/f2/ec/2ff2ecf64b296eaa362f00ced13bef57.png" class="img-fluid" id='top' alt="Responsive image">
 
+<div id='work' class="container-fluid bg-transparent p-0">
+  <div class="triangle-top p-0 floating-topper"></div>
+</div>
 <!-- THIS IS WHERE PROJECTS AND CARDS WILL GO -->
-<div class=" container-fluid bg-primary pb-5">
-  <div class="bg-light container justify-content-center floating-section pb-4">
+<div class="container-fluid bg-primary pb-5">
+  <div class="bg-white container justify-content-center floating-section pb-4">
     <h2  class='sectionheader text-dark'>My Work</h2>
     <div class="row justify-content-center">
-      <div class="card col-8 col-md-5 col-lg-4 my-4 mx-3">
+      <div class="card col-8 col-md-5 col-lg-4 my-4 mx-3 bg-light">
         <img src="https://i.pinimg.com/originals/48/cb/53/48cb5349f515f6e59edc2a4de294f439.png" class="card-img-top" alt="filler">
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
       </div>
-      <div class="card col-8 col-md-5 col-lg-4 my-4 mx-3">
+      <div class="card col-8 col-md-5 col-lg-4 my-4 mx-3 bg-light">
         <img src="https://onaliternote.files.wordpress.com/2016/11/wp-1480230666843.jpg" class="card-img-top" alt="filler">
         <div class="card-body">
           <p class="card-text">A second example that contains content.</p>
         </div>
       </div>
-      <div class="card col-8 col-md-5 col-lg-4 my-3 mx-3">
+      <div class="card col-8 col-md-5 col-lg-4 my-3 mx-3 bg-light">
         <img src="https://previews.123rf.com/images/fordzolo/fordzolo1506/fordzolo150600296/41026708-example-white-stamp-text-on-red-backgroud.jpg" class="card-img-top" alt="filler">
         <div class="card-body">
           <p class="card-text">THIRD EXAMPLE.</p>
@@ -71,12 +74,14 @@
   </div>
   </div>
 </div>
-<!-- GET IN TOUCH FORM -->
-<div class="container-fluid triangle-top bg-primary">
+<!-- SECTION TRIANGLE TOPPER -->
+<div class="container-fluid bg-primary p-0">
+  <div class="triangle-top bg-primary p-0"></div>
 </div>
+<!-- GET IN TOUCH FORM -->
 <div class="container-fluid bg-secondary">
-  <div class="container pt-n5 justify-content-center bg-light">
-    <h2 class='sectionheader text-dark'>Get in Touch</h2>
+  <div class="container justify-content-center bg-light form-section">
+    <h2 class='sectionheader text-dark' id='GIT'>Get in Touch</h2>
     <form>
       <div class="row">
           <div class="col-12 col-md-6 my-2">
@@ -98,20 +103,24 @@
     </div>
       <div class="row">
           <div class="col-12 my-2">
-          <button type="submit" class="btn btn-primary "><span class="align-center">SEND  <ion-icon class='align-center' name="send"></ion-icon></span></button>
+          <button type="submit" class="btn btn-primary"><span class="align-center">SEND  <ion-icon name="send"></ion-icon></span></button>
           </div>
       </div>
     </form>
   </div>
 </div>
-<!-- DIVIDER -->
+<!-- SECTION TRIANGLE FOOTER -->
 <div class="container-fluid bg-secondary p-0">
   <div class="triangle-foot bg-secondary p-0"></div>
 </div>
 <!-- Footer -->
   <footer class="mastfoot container-fluid bg-primary text-primary">
     <div class='row d-flex justify-content-center pt-3'>
-      <h2><ion-icon name="logo-github"></ion-icon> <ion-icon name="logo-linkedin"></ion-icon>  <ion-icon name="logo-codepen"></ion-icon></h2>
+      <h2>
+        <a class='text-text text-hover' href="https://github.com/andrew-hollingworth"><ion-icon name="logo-github"></ion-icon></a>
+        <a class='text-text text-hover' href="https://www.linkedin.com/in/andrew-hollingworth-87019124/"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a class='text-text text-hover' href="https://codepen.io/andrew-hollingworth"><ion-icon name="logo-codepen"></ion-icon></a>
+      </h2>
     </div>
     <div class='row flex-fill d-flex justify-content-center pb-2'>
       <p>© Andrew Hollingworth 2019</p>
