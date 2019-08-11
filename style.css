@@ -67,6 +67,16 @@ body {
 }
 
 /* ==========ANGLED DIVIDERS============ */
+/* .nav-footer {
+  position: relative;
+  margin-bottom: -10rem;
+  z-index: 1;
+  border-left: 0em solid transparent;
+  border-right: 100vw solid #0041B3;
+  border-bottom: 10em solid transparent;
+  border-top: 0em solid transparent;
+} */
+
 .floating-topper {
   position: relative;
   margin-top: -10rem;

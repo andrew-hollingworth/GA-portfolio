@@ -10,6 +10,8 @@
     <!-- Ionicons Icons -->
     <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/176a434e6e.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -35,7 +37,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item ml-auto">
-          <a class="nav-link text-secondary" href="#top">Back to the Top</a>
+          <a class="nav-link text-secondary" href="#top">About</a>
         </li>
         <li class="nav-item ml-auto">
           <a class="nav-link text-secondary" href="#work">Things I've Made</a>
@@ -46,11 +48,31 @@
       </ul>
     </div>
   </nav>
-  <!-- LANDING BACKGROUND IMAGE -->
-  <img src="https://i.pinimg.com/originals/2f/f2/ec/2ff2ecf64b296eaa362f00ced13bef57.png" class="img-fluid" id='top' alt="Responsive image">
-
+  <!-- LANDING CAROUSEL -->
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://i.pinimg.com/originals/2f/f2/ec/2ff2ecf64b296eaa362f00ced13bef57.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://cdn.stocksnap.io/img-thumbs/960w/ZW2XZLGHJO.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://cdn.stocksnap.io/img-thumbs/960w/X6HZDXQNOM.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<!-- Floating Topper -->
 <div id='work' class="container-fluid bg-transparent p-0">
-  <div class="triangle-top p-0 floating-topper"></div>
+  <div class="p-0 floating-topper"></div>
 </div>
 <!-- THIS IS WHERE PROJECTS AND CARDS WILL GO -->
 <div class="container-fluid bg-primary pb-5">
@@ -72,7 +94,7 @@
   </div>
 </div>
 <!-- SECTION TRIANGLE TOPPER -->
-<div class="container-fluid bg-primary p-0">
+<div class="container-fluid p-0">
   <div class="triangle-top bg-primary p-0"></div>
 </div>
 <!-- GET IN TOUCH FORM -->
@@ -82,25 +104,26 @@
     <form>
       <div class="row">
           <div class="col-12 col-md-6 my-2">
-            <input type="text" class="form-control" placeholder="Name">
+            <input type="text" class="form-control" id='sender-name' placeholder="Name">
           </div>
           <div class="col-12 col-md-6 my-2">
-            <input type="text" class="form-control" placeholder="Email">
+            <input type="text" class="form-control" id=
+          'sender-email' placeholder="Email">
           </div>
       </div>
       <div class="row">
         <div class="col-12 col-md-12 my-2">
-          <input type="text" class="form-control" placeholder="Subject">
+          <input type="text" class="form-control" id='sender-subject' placeholder="Subject">
         </div>
       </div>
       <div class="row">
         <div class="col-12 col-md-12 my-2">
-          <textarea class="form-control" id="messageText" placeholder="Message" rows="3"></textarea>
+          <textarea class="form-control" id="sender-message" placeholder="Message" rows="3"></textarea>
         </div>
     </div>
       <div class="row">
           <div class="col-12 my-2">
-          <button type="submit" class="btn btn-primary"><span class="align-center">SEND  <ion-icon name="send"></ion-icon></span></button>
+          <button onclick='sendMail(); return false' type="submit" class="btn btn-primary"><span class="align-center">SEND <ion-icon name="send"></ion-icon></span></button>
           </div>
       </div>
     </form>
@@ -114,11 +137,19 @@
   <footer class="mastfoot container-fluid bg-primary text-primary">
     <div class='row d-flex justify-content-center pt-3'>
       <h2>
+        <a class='text-text text-hover' href="https://soundcloud.com/user-864435869/albums" target="_blank"><i class="fab fa-soundcloud"></i></a>
+        <a class='text-text text-hover' href="https://codepen.io/andrew-hollingworth" target="_blank"><i class="fab fa-codepen"></i></a>
+        <a class='text-text text-hover' href="https://github.com/andrew-hollingworth" target="_blank"><i class="fab fa-github-alt"></i></a>
+        <a class='text-text text-hover' href="https://www.linkedin.com/in/andrew-hollingworth-87019124/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </h2>
+    </div>
+    <!-- <div class='row d-flex justify-content-center pt-3'>
+      <h2>
         <a class='text-text text-hover' href="https://github.com/andrew-hollingworth"><ion-icon name="logo-github"></ion-icon></a>
         <a class='text-text text-hover' href="https://www.linkedin.com/in/andrew-hollingworth-87019124/"><ion-icon name="logo-linkedin"></ion-icon></a>
         <a class='text-text text-hover' href="https://codepen.io/andrew-hollingworth"><ion-icon name="logo-codepen"></ion-icon></a>
       </h2>
-    </div>
+    </div> -->
     <div class='row flex-fill d-flex justify-content-center pb-2'>
       <p>© Andrew Hollingworth 2019</p>
     </div>

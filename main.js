@@ -1,22 +1,20 @@
 // https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
-window.onscroll = function ()  { progressBar(); }
-
-function progressBar() {
-  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrolled = (winScroll / height) * 100;
-  document.getElementById('myBar').style.width = scrolled + '%';
-}
+// window.onscroll = function ()  { progressBar(); }
+//
+// function progressBar() {
+//   const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+//   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+//   const scrolled = (winScroll / height) * 100;
+//   document.getElementById('myBar').style.width = scrolled + '%';
+// }
 
 // ============API CALL=============//
 // const originalURL = 'https://docs.google.com/spreadsheets/d/1dQxUB4awT-p7naX00MSJSYbyXKmI-7mfIsoh5BJsizk/edit#gid=0';
-
 // ID for sheet:
 const id = '1dQxUB4awT-p7naX00MSJSYbyXKmI-7mfIsoh5BJsizk';
-
 const source = `https://spreadsheets.google.com/feeds/list/${id}/od6/public/values?alt=json`;
 
-
+// ==========CARD OBJECT CONSTRUCTOR=========//
 class Cardclass {
   constructor(title, image, text, url) {
     this.title = title;
@@ -25,8 +23,7 @@ class Cardclass {
     this.url = url;
   }
 }
-
-// ============CONSTRUCT A CARD=============//
+// ==========CARD BUILDING FUNCTION==========//
 const buildCard = (cardData) => {
   const newCard = document.createElement('div');
   const bodyDiv = document.createElement('div');
@@ -50,7 +47,7 @@ const buildCard = (cardData) => {
   bodyDiv.appendChild(cardText);
   document.querySelector('#card-holder').appendChild(newCard);
 };
-
+// ============API CALL=============//
 async function makeAPICall() {
   const cardData = [];
   const res = await axios(source);
@@ -64,9 +61,17 @@ async function makeAPICall() {
       ),
     );
   }
-  console.log(cardData);
   cardData.forEach(buildCard);
 }
 
-// .data.feed.entry[0].gsx$title
 makeAPICall();
+
+// ============EMAIL FORM=============//
+// CITATION: https://stackoverflow.com/questions/271171/sending-emails-with-javascript/271172#271172
+function sendMail() {
+  const link = 'mailto:andrew.hollingworth@gmail.com'
+             + '?cc='
+             + '&subject=' + escape(document.querySelector('#sender-subject').value)
+             + '&body=' + escape(document.querySelector('#sender-message').value);
+  window.location.href = link;
+}
