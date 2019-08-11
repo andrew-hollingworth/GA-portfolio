@@ -29,13 +29,17 @@ class Cardclass {
 const buildCard = (cardData) => {
   const newCard = document.createElement('div');
   const bodyDiv = document.createElement('div');
+  const cardTitle = document.createElement('h3')
   const cardImage = document.createElement('img');
   const cardText = document.createElement('p');
   newCard.classList.add('card', 'col-8', 'col-md-5', 'col-lg-4', 'my-4', 'mx-3', 'bg-light', 'card-body');
+  cardTitle.classList.add('text-center', 'text-primary');
+  cardTitle.innerText = cardData.title;
   cardImage.src = cardData.image;
   cardImage.classList.add('card-img-top');
   cardText.innerText = cardData.text;
   cardText.classList.add('card-text');
+  newCard.appendChild(cardTitle);
   newCard.appendChild(cardImage);
   newCard.appendChild(bodyDiv);
   bodyDiv.appendChild(cardText);
