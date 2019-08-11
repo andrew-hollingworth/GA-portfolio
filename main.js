@@ -1,12 +1,10 @@
 // https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
-// window.onscroll = function ()  { progressBar(); }
-//
-// function progressBar() {
-//   const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-//   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-//   const scrolled = (winScroll / height) * 100;
-//   document.getElementById('myBar').style.width = scrolled + '%';
-// }
+function progressBar() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('myBar').style.width = scrolled + '%';
+}
 
 // ============API CALL=============//
 // const originalURL = 'https://docs.google.com/spreadsheets/d/1dQxUB4awT-p7naX00MSJSYbyXKmI-7mfIsoh5BJsizk/edit#gid=0';
@@ -64,8 +62,6 @@ async function makeAPICall() {
   cardData.forEach(buildCard);
 }
 
-makeAPICall();
-
 // ============EMAIL FORM=============//
 // CITATION: https://stackoverflow.com/questions/271171/sending-emails-with-javascript/271172#271172
 function sendMail() {
@@ -75,3 +71,8 @@ function sendMail() {
              + '&body=' + escape(document.querySelector('#sender-message').value);
   window.location.href = link;
 }
+
+// ============CALLED FUNCTIONS=============//
+window.onload = function () { progressBar(); };
+window.onscroll = function () { progressBar(); };
+makeAPICall();
