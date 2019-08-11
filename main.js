@@ -63,7 +63,7 @@ async function makeAPICall() {
   cardData.forEach(buildCard);
 }
 
-// ============EMAIL FORM=============//
+// ============EMAIL  FORM=============//
 // CITATION: https://stackoverflow.com/questions/271171/sending-emails-with-javascript/271172#271172
 function sendMail() {
   const link = 'mailto:andrew.hollingworth@gmail.com'
