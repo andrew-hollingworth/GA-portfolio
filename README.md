@@ -12,4 +12,11 @@ I still have a few unsolved issues. I would like to tidy up the design a bit. In
 
 I was really satisfied with the block design and the way I was able to get different sections to "float" in between those blocks. And it is totally responsive to boot(strap). Here are a few snippets of code that I'm happy with.
 
-![](readme-assets/smooth-scroll.gif)
+![](readme_assets/Screen Shot 2019-08-11 at 6.29.57 PM.png)
+This is one of the floating topper sections that allows different parts of my site to overlap.
+
+![](readme_assets/Screen Shot 2019-08-11 at 6.30.50 PM.png)
+This is my constructor to create my Card objects when pulling from the API data. This makes the next section much easier to navigate.
+
+![](readme_assets/Screen Shot 2019-08-11 at 6.30.42 PM.png)
+This is code used to build each of my Project cards in the DOM. This allows me to utilize the API to simply update a spreadsheet to keep content up-to-date.
