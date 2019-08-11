@@ -18,10 +18,11 @@ const source = `https://spreadsheets.google.com/feeds/list/${id}/od6/public/valu
 
 
 class Cardclass {
-  constructor(title, image, text) {
+  constructor(title, image, text, url) {
     this.title = title;
     this.image = image;
     this.text = text;
+    this.url = url;
   }
 }
 
@@ -29,18 +30,22 @@ class Cardclass {
 const buildCard = (cardData) => {
   const newCard = document.createElement('div');
   const bodyDiv = document.createElement('div');
-  const cardTitle = document.createElement('h3')
+  const cardTitle = document.createElement('h3');
+  const cardLink = document.createElement('a');
   const cardImage = document.createElement('img');
   const cardText = document.createElement('p');
-  newCard.classList.add('card', 'col-8', 'col-md-5', 'col-lg-4', 'my-4', 'mx-3', 'bg-light', 'card-body');
+  newCard.classList.add('card', 'col-8', 'col-md-5', 'col-lg-4', 'my-4', 'mx-3', 'bg-light', 'card-body', 'text-justify');
   cardTitle.classList.add('text-center', 'text-primary');
   cardTitle.innerText = cardData.title;
+  cardLink.href = cardData.url;
+  cardLink.setAttribute('target', '_blank');
   cardImage.src = cardData.image;
   cardImage.classList.add('card-img-top');
   cardText.innerText = cardData.text;
   cardText.classList.add('card-text');
   newCard.appendChild(cardTitle);
-  newCard.appendChild(cardImage);
+  newCard.appendChild(cardLink);
+  cardLink.appendChild(cardImage);
   newCard.appendChild(bodyDiv);
   bodyDiv.appendChild(cardText);
   document.querySelector('#card-holder').appendChild(newCard);
@@ -52,7 +57,11 @@ async function makeAPICall() {
   const entry = res.data.feed.entry;
   for (let i = 0; i < entry.length; i += 1) {
     cardData.push(
-      new Cardclass(entry[i].gsx$title.$t, entry[i].gsx$image.$t, entry[i].gsx$description.$t),
+      new Cardclass(
+        entry[i].gsx$title.$t,
+        entry[i].gsx$image.$t, entry[i].gsx$description.$t,
+        entry[i].gsx$url.$t,
+      ),
     );
   }
   console.log(cardData);
